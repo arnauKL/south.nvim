@@ -2,24 +2,19 @@
 local M = {}
 
 -- Default user settings
-M.config = {
-    transparent = false,
-    transparent_floats = false,
-}
+M.config = { transparent = false }
 
 M.setup = function(opts)
-    M.config = vim.tbl_deep_extend('force', M.config, opts or {})
-
-    if vim.g.colors_name then
-        vim.cmd('hi clear')
-    end
+    M.config = vim.tbl_extend('force', M.config, opts or {})
 
     vim.g.colors_name = 'south'
+    vim.cmd('highlight clear')
+
     vim.o.background = 'light'
 
     local cp = require 'south.palette'
 
-    -- Apply user transparency configuration
+    -- Apply user configuration
     local bg = M.config.transparent and 'NONE' or cp.background
     local bg_dark = M.config.transparent and 'NONE' or cp.darker_background
 
@@ -43,6 +38,16 @@ M.setup = function(opts)
         DiagnosticWarn        = { fg = cp.orange },
         DiagnosticInfo        = { fg = cp.sky },
         DiagnosticOk          = { fg = cp.lake },
+        Pmenu                 = { fg = cp.black, bg = bg_dark },
+        PmenuSel              = { fg = cp.black, bg = cp.selection },
+        PmenuSbar             = { bg = cp.cool_medium_grey },
+        PmenuThumb            = { bg = cp.cool_dark_grey },
+        Search                = { fg = cp.black, bg = cp.sky, bold = true },
+        IncSearch             = { fg = cp.black, bg = cp.orange, bold = true },
+        CurSearch             = { fg = cp.black, bg = cp.lake, bold = true },
+        TabLine               = { fg = cp.cool_medium_grey, bg = bg_dark },
+        TabLineFill           = { fg = cp.cool_medium_grey, bg = bg },
+        TabLineSel            = { fg = cp.black, bg = cp.selection, bold = true },
 
         -- Font lock
         Comment               = { fg = cp.cool_dark_grey, italic = true },

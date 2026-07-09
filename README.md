@@ -52,3 +52,9 @@ I've only added support for the plugins I use:
 
 Everything else falls back to editor highlights. If you'd like to add support
 for other plugins, feel free to submit a PR.
+
+## Screenshots
+
+Some lua and C with oil.nvim
+
+![assets/Screenshot From 2026-07-09 14-16-38.png]
