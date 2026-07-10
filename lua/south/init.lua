@@ -108,20 +108,20 @@ M.setup = function(opts)
         OilLink                        = { fg = cp.aqua, underline = true },
         OilTrash                       = { fg = cp.cool_dark_grey },
 
-        -- Markdown
-        Title                          = { fg = cp.slate_grey, bold = true },
-        markdownH1                     = { fg = cp.slate_grey, bold = true },
-        markdownH2                     = { fg = cp.slate_grey, bold = true },
-        markdownH3                     = { fg = cp.slate_grey, bold = true },
-        markdownH4                     = { fg = cp.slate_grey, bold = true },
-        markdownH5                     = { fg = cp.slate_grey, bold = true },
-        markdownH6                     = { fg = cp.slate_grey, bold = true },
-        ["@markup.heading.1.markdown"] = { fg = cp.slate_grey, bold = true },
-        ["@markup.heading.2.markdown"] = { fg = cp.slate_grey, bold = true },
-        ["@markup.heading.3.markdown"] = { fg = cp.slate_grey, bold = true },
-        ["@markup.heading.4.markdown"] = { fg = cp.slate_grey, bold = true },
-        ["@markup.heading.5.markdown"] = { fg = cp.slate_grey, bold = true },
-        ["@markup.heading.6.markdown"] = { fg = cp.slate_grey, bold = true },
+        -- Some markups
+        markdownH1                     = { fg = cp.denim, bold = true },
+        markdownH2                     = { fg = cp.lake, bold = true },
+        markdownH3                     = { fg = cp.aqua, bold = true },
+        markdownH4                     = { fg = cp.grass, bold = true },
+        markdownH5                     = { fg = cp.aqua, bold = true },
+        markdownH6                     = { fg = cp.auburn, bold = true },
+        ["@markup.heading.1.markdown"] = { fg = cp.denim, bold = true },
+        ["@markup.heading.2.markdown"] = { fg = cp.lake, bold = true },
+        ["@markup.heading.3.markdown"] = { fg = cp.aqua, bold = true },
+        ["@markup.heading.4.markdown"] = { fg = cp.grass, bold = true },
+        ["@markup.heading.5.markdown"] = { fg = cp.aqua, bold = true },
+        ["@markup.heading.6.markdown"] = { fg = cp.auburn, bold = true },
+        ["@markup.heading.typst"]      = { fg = cp.denim, bold = true },
     }
 
     -- Apply every highlight group
