@@ -30,7 +30,7 @@ M.setup = function(opts)
     local italic_linenums = M.config.styles.italics and M.config.styles.italic_linenums
     local bold_keywords = M.config.styles.bold_keywords and true or false
     local float_bg = M.config.darker_floats and cp.darker_background or
-        bg_dark -- i'll assume that if true, the user does not want transparency
+        bg -- i'll assume that if true, the user does not want transparency
 
     local groups = {
         -- General
