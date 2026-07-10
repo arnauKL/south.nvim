@@ -4,12 +4,12 @@ local M = {}
 -- Default user settings
 M.config = {
     transparent = false,
+    darker_floats = false,
     styles = {
         italics = true,
         italic_comments = true,
         italic_linenums = true,
         bold_keywords = false,
-        darker_floats = false,
     }
 }
 
