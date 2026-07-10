@@ -38,7 +38,7 @@ M.setup = function(opts)
         Cursor                         = { bg = cp.black },
         StatusLine                     = { fg = cp.black, bg = cp.cool_light_grey },
         StatusLineNC                   = { fg = cp.cool_dark_grey, bg = cp.cool_light_grey },
-        NormalFloat                    = { fg = cp.black, bg = bg_dark },
+        NormalFloat                    = { fg = cp.black, bg = float_bg },
         FloatBorder                    = { fg = cp.cool_medium_grey, bg = bg },
         Visual                         = { bg = cp.selection },
         CursorLine                     = { bg = bg_dark },
