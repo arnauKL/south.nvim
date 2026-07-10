@@ -13,6 +13,14 @@ colour used for comments and specific UI elements, but not WCAG AAA compliant.
 
 ## Screenshots
 
+Some lua with LSP warnings and markdown:
+
+![lua](assets/lua.png)
+
+Some C example code with telescope's `find_files`:
+
+![telescope](assets/telescope.png)
+
 ## Installation and configuration
 
 ### Using Neovim 0.12+'s native package manager `vim.pack`:
