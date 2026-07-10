@@ -8,6 +8,8 @@ M.config = {
         italics = true,
         italic_comments = true,
         italic_linenums = true,
+        bold_keywords = false,
+        darker_floats = false,
     }
 }
 
@@ -26,6 +28,9 @@ M.setup = function(opts)
     local bg_dark = M.config.transparent and 'NONE' or cp.darker_background
     local italic_comments = M.config.styles.italics and M.config.styles.italic_comments
     local italic_linenums = M.config.styles.italics and M.config.styles.italic_linenums
+    local bold_keywords = M.config.styles.bold_keywords and true or false
+    local float_bg = M.config.darker_floats and cp.darker_background or
+        bg_dark -- i'll assume that if true, the user does not transparency
 
     local groups = {
         -- General
@@ -77,7 +82,7 @@ M.setup = function(opts)
         String                         = { fg = cp.grass },
         Function                       = { fg = cp.cobalt },
         Statement                      = { fg = cp.aqua }, -- Keywords/conditionals
-        Keyword                        = { fg = cp.aqua },
+        Keyword                        = { fg = cp.aqua, bold = bold_keywords },
         Number                         = { fg = cp.denim },
         Float                          = { fg = cp.denim },
         Identifier                     = { fg = cp.sky }, -- Variable names
@@ -121,6 +126,7 @@ M.setup = function(opts)
         ["@markup.heading.4.markdown"] = { fg = cp.grass, bold = true },
         ["@markup.heading.5.markdown"] = { fg = cp.aqua, bold = true },
         ["@markup.heading.6.markdown"] = { fg = cp.auburn, bold = true },
+        ["@markup.raw.block.markdown"] = { bg = cp.darker_background },
         ["@markup.heading.typst"]      = { fg = cp.denim, bold = true },
     }
 
