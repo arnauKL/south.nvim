@@ -8,11 +8,11 @@ A bright, summery ~Emacs~ Neovim theme 🌱☀️🌊
 
 ## Installation and configuration
 
-### Using neovim 0.12+'s native `vim.pack`:
+### Using Neovim 0.12+'s native `vim.pack`:
 
 ```lua
 vim.pack.add({
-    { src = 'https://github.com/arnauKL/south.nvim' }
+    <D-c>
 })
 vim.cmd.colorscheme('south')
 ```
@@ -35,9 +35,15 @@ Right now, the only available configuration is a setting for
 transparent backgrounds. It is set to `false` by default.
 
 ```lua
-require 'south'.setup({
-    transparent = true
+require('south').setup({
+    transparent = false,        -- skips setting backgrounds if true
+    styles = {
+        italics = true,         -- global switch
+        italic_comments = true, -- individual settings if `italics = true`
+        italic_linenums = true, 
+    }
 })
+vim.cmd.colorscheme('south')
 ```
 
 ## Supported plugins
@@ -51,11 +57,3 @@ Everything else falls back to editor highlights. If you'd like to add support
 for other plugins, feel free to submit a PR.
 
 ## Screenshots
-
-Some zig and C with oil.nvim:
-
-![Some zig, C and oil.nvim](assets/zig_c_oil.png)
-
-Some lua and telescope.nvim:
-
-![Some lua and telescope.nvim](assets/lua_and_telescope.png)
