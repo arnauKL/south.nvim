@@ -13,11 +13,11 @@ colour used for comments and specific UI elements, but not WCAG AAA compliant.
 
 ## Screenshots
 
-Some lua with LSP warnings and markdown:
+Some lua with Oil.nvim:
 
 ![lua](assets/lua.png)
 
-Some C example code with telescope's `find_files`:
+Some C and typst code with telescope's `live_grep`:
 
 ![telescope](assets/telescope.png)
 
