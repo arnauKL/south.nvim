@@ -113,7 +113,7 @@ M.setup = function(opts)
         FzfLuaNormal                   = { fg = cp.black, bg = float_bg },
         FzfLuaBorder                   = { fg = cp.cool_medium_grey, bg = float_bg },
         FzfLuaTitle                    = { fg = cp.denim, bg = float_bg, bold = true },
-        FzfLuaBackdrop                 = { bg = cp.darker_background, blend = 20 },
+        FzfLuaBackdrop                 = { fg = cp.black, bg = float_bg },
 
         FzfLuaPreviewNormal            = { link = "FzfLuaNormal" },
         FzfLuaPreviewBorder            = { link = "FzfLuaBorder" },
