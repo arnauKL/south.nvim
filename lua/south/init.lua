@@ -113,7 +113,7 @@ M.setup = function(opts)
         FzfLuaNormal                   = { fg = cp.black, bg = float_bg },
         FzfLuaBorder                   = { fg = cp.cool_medium_grey, bg = float_bg },
         FzfLuaTitle                    = { fg = cp.denim, bg = float_bg, bold = true },
-        FzfLuaBackdrop                 = { bg = cp.black, blend = 20 }, -- Dim the background window slightly
+        FzfLuaBackdrop                 = { bg = cp.darker_background, blend = 20 },
 
         FzfLuaPreviewNormal            = { link = "FzfLuaNormal" },
         FzfLuaPreviewBorder            = { link = "FzfLuaBorder" },
@@ -122,7 +122,8 @@ M.setup = function(opts)
         FzfLuaFzfPrompt                = { fg = cp.denim, bold = true },
         FzfLuaFzfPointer               = { fg = cp.aqua, bold = true },
         FzfLuaFzfMatch                 = { fg = cp.cobalt, bold = true },
-        FzfLuaFzfCursorLine            = { bg = cp.selection },
+        FzfLuaFzfMarker                = { fg = cp.grass, bold = true },
+        FzfLuaFzfCursorLine            = { link = "CursorLine" },
         FzfLuaFzfScrollbar             = { fg = cp.cool_medium_grey },
 
         FzfLuaHeaderBind               = { fg = cp.denim },
