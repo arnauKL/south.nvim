@@ -1,0 +1,28 @@
+return function(cp, colors)
+    return {
+        NoiceCmdlinePopup              = { fg = cp.black, bg = colors.float_bg },
+        NoiceCmdlinePopupBorder        = { fg = cp.cool_medium_grey, bg = colors.float_bg },
+        NoiceCmdlinePopupTitle         = { fg = cp.denim, bold = true },
+        NoiceCmdlineIcon               = { fg = cp.denim },
+        NoiceMini                      = { fg = cp.cool_dark_grey, bg = colors.bg },
+        NoiceConfirm                   = { link = 'NormalFloat' },
+        NoiceConfirmBorder             = { link = 'FloatBorder' },
+        NoiceCompletionItemKind        = { fg = cp.purple },
+        NoiceCompletionMenu            = { link = 'Pmenu' },
+        NoiceCompletionMenuSelect      = { link = 'PmenuSel' },
+        NoiceFormatConfirm             = { fg = cp.lake },
+        NoiceFormatError               = { fg = cp.auburn },
+        NoiceFormatWarn                = { fg = cp.orange },
+        NoiceFormatInfo                = { fg = cp.sky },
+        NoiceFormatProgress            = { fg = cp.denim },
+        NoiceFormatProgressDone        = { fg = cp.lake },
+        NoiceFormatProgressTodo        = { fg = cp.cool_medium_grey },
+        NoicePopup                     = { link = 'NormalFloat' },
+        NoicePopupBorder               = { link = 'FloatBorder' },
+        NoicePopupmenu                 = { link = 'Pmenu' },
+        NoicePopupmenuSelect           = { link = 'PmenuSel' },
+        NoiceScrollbar                 = { link = 'PmenuSbar' },
+        NoiceThumb                     = { link = 'PmenuThumb' },
+        NoiceVirtualText               = { fg = cp.cool_dark_grey },
+    }
+end

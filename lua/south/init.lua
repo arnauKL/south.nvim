@@ -16,8 +16,8 @@ M.config = {
 M.setup = function(opts)
     M.config = vim.tbl_extend('force', M.config, opts or {})
 
-    vim.g.colors_name = 'south'
     vim.cmd('highlight clear')
+    vim.g.colors_name = 'south'
 
     vim.o.background = 'light'
 
@@ -99,49 +99,6 @@ M.setup = function(opts)
         DiffDelete                     = { fg = cp.cool_medium_grey, bg = cp.light_red_highlight },
         DiffText                       = { bg = cp.dark_blue_highlight },
 
-        -- Telescope.nvim
-        TelescopeNormal                = { fg = cp.black, bg = float_bg },
-        TelescopeBorder                = { fg = cp.cool_medium_grey, bg = float_bg },
-        TelescopeResultsNormal         = { fg = cp.black, bg = float_bg },
-        TelescopePreviewNormal         = { fg = cp.black, bg = float_bg },
-        TelescopePromptNormal          = { fg = cp.black, bg = float_bg },
-        TelescopePromptBorder          = { fg = cp.denim, bg = float_bg },
-        TelescopeSelection             = { bg = cp.selection },
-        TelescopeMatching              = { fg = cp.cobalt, bold = true },
-
-        -- fzf-lua
-        FzfLuaNormal                   = { fg = cp.black, bg = float_bg },
-        FzfLuaBorder                   = { fg = cp.cool_medium_grey, bg = float_bg },
-        FzfLuaTitle                    = { fg = cp.denim, bg = float_bg, bold = true },
-        FzfLuaBackdrop                 = { fg = cp.black, bg = float_bg },
-
-        FzfLuaPreviewNormal            = { link = "FzfLuaNormal" },
-        FzfLuaPreviewBorder            = { link = "FzfLuaBorder" },
-        FzfLuaPreviewTitle             = { fg = cp.lake, bg = float_bg, bold = true },
-
-        FzfLuaFzfPrompt                = { fg = cp.denim, bold = true },
-        FzfLuaFzfPointer               = { fg = cp.aqua, bold = true },
-        FzfLuaFzfMatch                 = { fg = cp.cobalt, bold = true },
-        FzfLuaFzfMarker                = { fg = cp.grass, bold = true },
-        FzfLuaFzfCursorLine            = { link = "CursorLine" },
-        FzfLuaFzfScrollbar             = { fg = cp.cool_medium_grey },
-
-        FzfLuaHeaderBind               = { fg = cp.denim },
-        FzfLuaHeaderText               = { fg = cp.cool_dark_grey },
-        FzfLuaPathColNr                = { fg = cp.sky },
-        FzfLuaPathLineNr               = { fg = cp.grass },
-        FzfLuaBufNr                    = { fg = cp.denim },
-        FzfLuaBufFlagCur               = { fg = cp.auburn, bold = true },
-        FzfLuaBufFlagAlt               = { fg = cp.sky },
-        FzfLuaLivePrompt               = { fg = cp.denim, bold = true },
-        FzfLuaLiveSym                  = { fg = cp.purple, bold = true },
-
-        -- Oil.nvim
-        OilDir                         = { fg = cp.denim, bold = true },
-        OilDirSlash                    = { fg = cp.cool_dark_grey },
-        OilLink                        = { fg = cp.aqua, underline = true },
-        OilTrash                       = { fg = cp.cool_dark_grey },
-
         -- Some markups
         markdownH1                     = { fg = cp.denim, bold = true },
         markdownH2                     = { fg = cp.lake, bold = true },
@@ -158,8 +115,18 @@ M.setup = function(opts)
         ["@markup.heading.typst"]      = { fg = cp.denim, bold = true },
     }
 
+    -- Merge plugin highlight groups
+    local plugin_groups = require('south.plugins').get(cp, {
+        bg = bg,
+        bg_dark = bg_dark,
+        float_bg = float_bg,
+    })
+
     -- Apply every highlight group
     for group_name, settings in pairs(groups) do
+        vim.api.nvim_set_hl(0, group_name, settings)
+    end
+    for group_name, settings in pairs(plugin_groups) do
         vim.api.nvim_set_hl(0, group_name, settings)
     end
 end

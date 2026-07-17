@@ -1,6 +1,6 @@
 # South for Neovim
 
-A bright, summery ~Emacs~ Neovim theme 🌱☀️🌊
+A bright, summery ~~Emacs~~ Neovim theme 🌱☀️🌊
 
 > This is a Neovim port of the original Emacs
 > [south](https://github.com/SophieBosio/south) theme. All credit goes to
@@ -80,12 +80,35 @@ require('south').setup({
 
 ## Supported plugins
 
-I developed this port mostly for myself so I've only added support
-for the plugins I use:
+| Navigation / UI               | Completion / Workflow       | Messages / Markup                             |
+| ----------------------------- | --------------------------- | --------------------------------------------- |
+| [telescope.nvim][telescope]   | [nvim-cmp][cmp]             | [noice.nvim][noice]                           |
+| [fzf-lua][fzf]                | [blink.cmp][blink]          | [nvim-notify][notify]                         |
+| [oil.nvim][oil]               | [which-key.nvim][which-key] | [render-markdown.nvim][render-markdown]       |
+| [nvim-tree.lua][nvim-tree]    | [gitsigns.nvim][gitsigns]   | [snacks.nvim][snacks]                         |
+| [neo-tree.nvim][neo-tree]     | [trouble.nvim][trouble]     | [mini.files][mini-files]                      |
+| [bufferline.nvim][bufferline] | [nvim-dap][dap]             | [indent-blankline.nvim][indent-blankline]     |
+|                               | [lazy.nvim][lazy]           | [nvim-treesitter-context][treesitter-context] |
 
-- Telescope.nvim
-- Oil.nvim
+Everything else falls back to Neovim's built-in editor highlights.
 
-I also included some styling for Markdown headers. Everything else falls back
-to editor highlights. If you'd like to add support for other plugins, feel
-free to submit a PR!
+[telescope]: https://github.com/nvim-telescope/telescope.nvim
+[fzf]: https://github.com/ibhagwan/fzf-lua
+[oil]: https://github.com/stevearc/oil.nvim
+[nvim-tree]: https://github.com/nvim-tree/nvim-tree.lua
+[neo-tree]: https://github.com/nvim-neo-tree/neo-tree.nvim
+[bufferline]: https://github.com/akinsho/bufferline.nvim
+[cmp]: https://github.com/hrsh7th/nvim-cmp
+[blink]: https://github.com/Saghen/blink.cmp
+[which-key]: https://github.com/folke/which-key.nvim
+[gitsigns]: https://github.com/lewis6991/gitsigns.nvim
+[trouble]: https://github.com/folke/trouble.nvim
+[dap]: https://github.com/mfussenegger/nvim-dap
+[lazy]: https://github.com/folke/lazy.nvim
+[indent-blankline]: https://github.com/lukas-reineke/indent-blankline.nvim
+[treesitter-context]: https://github.com/nvim-treesitter/nvim-treesitter-context
+[noice]: https://github.com/folke/noice.nvim
+[notify]: https://github.com/rcarriga/nvim-notify
+[render-markdown]: https://github.com/MeanderingProgrammer/render-markdown.nvim
+[snacks]: https://github.com/folke/snacks.nvim
+[mini-files]: https://github.com/echasnovski/mini.files
