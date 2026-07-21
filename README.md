@@ -1,10 +1,8 @@
 # South for Neovim
 
-A bright, summery ~Emacs~ Neovim theme 🌱☀️🌊
+A bright, summery Neovim theme 🌱☀️🌊
 
-> This is a Neovim port of the original Emacs
-> [south](https://github.com/SophieBosio/south) theme. All credit goes to
-> Sophie Bosio, thanks for creating this lovely theme.
+> This is a Neovim port of the original Emacs [south](https://github.com/SophieBosio/south) theme. 
 
 Licensed under GPL-3.0.
 
@@ -13,15 +11,15 @@ colour used for comments and specific UI elements, but not WCAG AAA compliant.
 
 ## Screenshots
 
-Some lua:
+### Lua
 
 ![lua](assets/lua.png)
 
-Some C:
+### C
 
 ![C](assets/C.png)
 
-## Installation and configuration
+## Installation
 
 ### Using Neovim 0.12+'s native package manager `vim.pack`:
 
@@ -60,10 +58,9 @@ vim.cmd.colorscheme('south')
 }
 ```
 
-### Configuration
+## Configuration
 
-Right now, there are only a few configuration settings. By default, they are
-all set to be as close to the original emacs theme:
+Default options are configured to stay as close as possible to the original Emacs theme:
 
 ```lua
 require('south').setup({
@@ -78,19 +75,29 @@ require('south').setup({
 })
 ```
 
+### Accessing palette colors
+
+If you want to use south colors in custom highlights or statusline plugins:
+
+```lua
+local palette = require 'south'.get_palette()
+
+-- then, colors are accessible via palette.grass, palette.denim, palette.black, etc.
+```
+
 ## Supported plugins
 
-I developed this port mostly for myself so I've only added support
+Out of the box I developed this port mostly for myself so I've only added support
 for the plugins I use:
 
-- Telescope.nvim
-- Oil.nvim
-- Which Key
-- Fzf-lua
+- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+- [WhichKey](https://github.com/folke/which-key.nvim)
+- [oil.nvim](https://github.com/stevearc/oil.nvim)
+- [fzf-lua](https://github.com/ibhagwan/fzf-lua)
+- Markdown heading markup
 
-I also included some styling for Markdown headers. Everything else falls back
-to editor highlights. If you'd like to add support for other plugins, feel
-free to submit a PR!
+Everything else falls back to editor highlights. If you'd like to add support
+for other plugins, feel free to submit a PR!
 
 ## Contributing
 
@@ -102,4 +109,5 @@ This includes bug reports and comments on the issue tracker.
 
 ## Acknowledgements
 
-- [vague.nvim][https://github.com/vague-theme/vague.nvim], which I used for inspiration on plugin modularity.
+- [Sophie Bosio](https://github.com/SophieBosio) for designing the original Emacs `south` theme and palette, thanks for creating this lovely theme. 
+- [vague.nvim](https://github.com/vague-theme/vague.nvim) for the inspiration behind the plugin's code modularity.
