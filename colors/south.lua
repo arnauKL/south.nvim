@@ -1,1 +1,1 @@
-require 'south'.setup()
+require 'south'._colorscheme()

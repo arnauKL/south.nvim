@@ -85,7 +85,21 @@ for the plugins I use:
 
 - Telescope.nvim
 - Oil.nvim
+- Which Key
+- Fzf-lua
 
 I also included some styling for Markdown headers. Everything else falls back
 to editor highlights. If you'd like to add support for other plugins, feel
 free to submit a PR!
+
+## Contributing
+
+### Strict No LLM / No AI Policy
+
+Use of generative AI/LLMs is strictly forbidden for all contributions to `south.nvim`.
+
+This includes bug reports and comments on the issue tracker.
+
+## Acknowledgements
+
+- [vague.nvim][https://github.com/vague-theme/vague.nvim], which I used for inspiration on plugin modularity.
